@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>PrimeCare</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+  <!-- fonts awesome style -->
+  <link href="/static/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,500,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="contact_nav_container">
+        <div class="container">
+          <div class="contact_nav">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+          </div>
+          <div id="myNav" class="overlay">
+            <div class="menu_btn-style ">
+              <button onclick="closeNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div class="overlay-content">
+                <a class="active" href="{{url_for('index')}}">HOME</a>
+                <a class="" href="{{url_for('about')}}">ABOUT</a>
+                <a class="" href="{{url_for('registration')}}">REGISTRATION</a>
+                <a class="" href="{{url_for('login')}}">LOGIN</a>
+            </div>
+          </div>
+          <a class="navbar-brand" href="index.html">
+            <span>
+              SIGNUP
+            </span>
+          </a>
+          <div class="user_option">
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="container" style="margin-top: -150px;">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="contact-form">
+            <div class="heading_container">
+              
+            </div>
+            <form action="{{url_for('registration')}}" method="post" onsubmit="return validateForm()">
+              {% if msg %}
+              <script>alert('{{msg}}');</script>
+              {% endif %}
+          
+              <input type="text" placeholder="Full name" name="name" required minlength="2" maxlength="50"/>
+              
+              <div class="top_input">
+                  <input type="email" placeholder="Email" name="email" required />
+                  <input type="tel" placeholder="Phone Number" name="phonenumber" required pattern="[0-9]{10}" />
+              </div>
+              
+              <div class="top_input">
+                  <input type="password" placeholder="Password" name="password" required minlength="6" />
+                  <input type="password" placeholder="Confirm Password" name="confirmpassword" required />
+              </div>
+              
+              <div class="top_input">
+                  <input type="number" placeholder="Age" name="age" min="18" max="100" required />
+                  <input type="text" placeholder="Place" name="place" required />
+              </div>
+              
+              <div class="btn-box">
+                  <button type="submit">REGISTER</button>
+              </div>
+          </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <script>
+    function validateForm() {
+        var password = document.querySelector('input[name="password"]').value;
+        var confirmPassword = document.querySelector('input[name="confirmpassword"]').value;
+        
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+    
+        return true;
+    }
+    </script>
+    
+
+  <script src="/static/js/jquery-3.4.1.min.js"></script>
+  <script src="/static/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="/static/js/custom.js"></script>
+
+</body>
+
+</html>

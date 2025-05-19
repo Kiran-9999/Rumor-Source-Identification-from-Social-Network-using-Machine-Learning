@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>rumor</title>
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+  <!-- fonts awesome style -->
+  <link href="/static/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,500,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+  <title>Form with Modal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="contact_nav_container">
+        <div class="container">
+          <div class="contact_nav">
+            <a href="">
+              
+            </a>
+            <a href="">
+              
+            </a>
+            <a href="">
+              
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+          </div>
+          <div id="myNav" class="overlay">
+            <div class="menu_btn-style ">
+              <button onclick="closeNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div class="overlay-content">
+              <a class="active" href="{{url_for('prediction')}}">PREDICTION</a>
+              <a class="" href="{{url_for('index')}}">LOGOUT</a>
+              
+            </div>
+          </div>
+          <a class="navbar-brand" href="index.html">
+            <span style="margin-right:500px;">
+              EVALUATION OF RESULTS
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding">
+    <div class="container" style="margin-top:-600px;">
+      <div class="heading_container">
+        <h2>
+          
+        </h2>
+      </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="box">
+              <div class="img-box">
+                <img src="/static/images/b1.jpg" alt="" />
+              </div>
+              <div class="client_detail">
+                <div class="client_name">
+                  <div class="client_info">
+                    
+                    <span>
+                      Public Health
+                    </span>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p align="justify">
+                  In the context of disease outbreaks, identifying the source of misinformation or rumors can help public health officials provide accurate information to the public. For instance, during an epidemic, rumors about cures or preventive measures can spread quickly. By tracing these rumors back to their source, officials can address misinformation more effectively and prevent public panic or the adoption of harmful practices.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="box">
+              <div class="img-box">
+                <img src="static/images/b2.avif" alt="" />
+              </div>
+              <div class="client_detail">
+                <div class="client_name">
+                  <div class="client_info">
+                    
+                    <span>
+                      Brand Reputation Management
+                    </span>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  Companies can use rumor source identification to manage and protect their brand reputation. If negative rumors or false reviews about a product or service start circulating, identifying the source allows businesses to address the issue, correct misinformation, and mitigate potential damage to their brand.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="box">
+              <div class="img-box">
+                <img src="/static/images/b3.avif" alt="" />
+              </div>
+              <div class="client_detail">
+                <div class="client_name">
+                  <div class="client_info">
+                    <span>
+                      Community Management
+                    </span>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  In online communities or forums, identifying the source of disruptive or harmful rumors can help moderators maintain a positive environment. By addressing these sources, community managers can reduce conflicts and ensure that discussions remain constructive and respectful.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- end client section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding2" style="margin-top:-200px;">
+       <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info_contact">
+            <div class="contact_link_box">
+            </div>
+          </div>
+          <div class="info_social">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info_link_box">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>
+          </h5>
+          <form action="{{url_for('prediction')}}" method="post">
+            {% if msg %}
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p style="color:black">{{msg}}</p>
+                    <p style="color:black">{{suggestion}}</p>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
+        
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+        
+                    // Display the modal
+                    modal.style.display = "block";
+        
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+        
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                });
+            </script>
+            {% endif %}
+            <input type="text" placeholder="ENTER YOUR COMMENT" name="text" style="margin-left:-400px"/>
+            <button type="submit">SEND</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="/static/js/jquery-3.4.1.min.js"></script>
+  <script src="/static/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="/static/js/custom.js"></script>
+</body>
+</html>
